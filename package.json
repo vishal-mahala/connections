@@ -1,0 +1,20 @@
+{
+  "name": "connections",
+  "version": "1.0.0",
+  "description": "A connection platform for developers",
+  "keywords": [
+    "node.js",
+    "javascript",
+    "backend"
+  ],
+  "license": "ISC",
+  "author": "Vishal Mahala",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
