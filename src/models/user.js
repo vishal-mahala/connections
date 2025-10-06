@@ -15,12 +15,22 @@ const userSchema = new mongoose.Schema(
       required: true,
       trim: true,
       lowercase: true,
+      validator(value) {
+        if (!validator.isEmail(value)) {
+          throw new Error("Invalid email id:" + value);
+        }
+      },
     },
     password: {
       type: String,
       required: true,
       minlength: 6,
       maxlength: 17,
+      validator(value) {
+        if (!validator.isStrongPassword(value)) {
+          throw new Error("Enter a strong password" + value);
+        }
+      },
     },
     age: {
       type: Number,
