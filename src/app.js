@@ -2,6 +2,7 @@ const express = require("express");
 const connectDB = require("./config/database");
 const app = express();
 const User = require("./models/user");
+const { validateSighUpData } = require("./Utils/validation");
 
 app.use(express.json());
 
