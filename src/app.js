@@ -13,7 +13,7 @@ app.post("/signup", async (req, res) => {
 
   validateSighUpData(req);
 
-  const { firstName, lastName, emailId, password } = req.body;
+  const { firstName, lastName, emailId, password, gender } = req.body;
 
   const passwordHash = await bcrypt.hash(password, 10);
 
@@ -22,6 +22,7 @@ app.post("/signup", async (req, res) => {
     lastName,
     emailId,
     password: passwordHash,
+    gender,
   });
 
   try {
